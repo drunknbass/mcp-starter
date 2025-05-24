@@ -1,0 +1,74 @@
+# Agent Instructions
+
+This file provides guidance to AI assistants when working with code in this repository.
+
+## Project Overview
+
+This is an MCP (Model Context Protocol) starter template that provides a basic structure for building MCP servers in TypeScript. The template includes example implementations of tools, resources, and prompts that can be customized for specific use cases.
+
+## Architecture
+
+- **Server Configuration**: The server is built using the MCP SDK with TypeScript and ES modules
+- **MCP Components**: Example implementations include:
+  1. `echo` tool: A simple tool that echoes back messages
+  2. `/config` resource: Returns server configuration
+  3. `greeting` prompt: Generates personalized greeting messages
+- **Transport**: Uses stdio (standard input/output) for communication with MCP clients
+
+## Project Structure
+
+```
+mcp-starter/
+├── src/
+│   └── server.ts      # Main server implementation
+├── dist/              # Compiled JavaScript output
+├── package.json       # Project configuration
+├── tsconfig.json      # TypeScript configuration
+├── eslint.config.js   # ESLint configuration
+└── README.md          # Project documentation
+```
+
+## Common Development Commands
+
+```bash
+# Install dependencies
+npm install
+
+# Run the server in development mode with hot reloading
+npm run dev
+
+# Build the TypeScript project
+npm run build
+
+# Start the compiled server
+npm run start
+
+# Lint the codebase
+npm run lint
+
+# Format the codebase
+npm run format
+```
+
+## Customization Guide
+
+When extending this starter:
+1. Replace the example tool, resource, and prompt implementations in `server.ts`
+2. Add your own request handlers following the MCP SDK patterns
+3. Update the server capabilities as needed
+4. Implement proper error handling using MCP error types
+
+## Testing
+
+The project includes a `test-server.js` file that demonstrates how to test the MCP server by:
+- Initializing the connection
+- Listing available tools
+- Calling tools and verifying responses
+
+## Best Practices
+
+- Use Zod schemas for input validation
+- Handle errors appropriately with MCP error codes
+- Keep the server implementation modular and extensible
+- Follow TypeScript best practices and maintain type safety
+- Use appropriate logging for debugging (respecting stdio communication)

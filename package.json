@@ -1,0 +1,56 @@
+{
+  "name": "mcp-starter",
+  "version": "1.0.0",
+  "description": "A starter template for building MCP (Model Context Protocol) servers",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "mcp-starter": "dist/server.js"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/server.ts",
+    "start": "node dist/server.js",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\" \"*.md\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drunknbass/mcp-starter.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "starter",
+    "template"
+  ],
+  "author": "drunknbass",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drunknbass/mcp-starter/issues"
+  },
+  "homepage": "https://github.com/drunknbass/mcp-starter#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.3",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.5",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
